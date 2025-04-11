@@ -27,11 +27,11 @@ inputs:
 outputs:
   id:
     description: "ID"
-  agentpool_name
+  agentpool_name:
     description: "Agent-pool name"
-  customer_id
+  customer_id:
     description: "Customer ID"
-  customer_name
+  customer_name:
     description: "Customer name"
   has_passed:
     description: "Did the test pass?"
