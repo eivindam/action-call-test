@@ -41,7 +41,7 @@ async function run() {
     core.setOutput('is_finished', res.is_finished)
     core.setOutput('project_id', res.project_id)
     core.setOutput('project_name', res.project_name)
-    core.setOutput('result_description', res.result.description)
+    core.setOutput('result_description', res.result_description)
     core.setOutput('session_id', res.session_id)
     core.setOutput('session_status', res.session_status)
     core.setOutput('started_at', res.started_at)
