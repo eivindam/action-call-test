@@ -94,9 +94,6 @@ jobs:
 ### `test_name`
 ### `testcase_name`
 
-
-The Sipfront test session ID of the executed test run.
-
 ## Example usage
 
 ```yaml
