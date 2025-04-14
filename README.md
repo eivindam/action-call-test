@@ -74,9 +74,25 @@ jobs:
 
 ## Outputs
 
+### `id`
+### `agentpool_name`
+### `customer_id`
+### `customer_name`
+### `has_passed`
+### `is_failed`
+### `is_finished`
+### `project_id`
+### `project_name`
+### `result_description`
 ### `session_id`
-
-The Sipfront test session ID of the executed test run.
+### `session_status`
+### `started_at`
+### `status`
+### `stopped_at`
+### `tags`
+### `test_id`
+### `test_name`
+### `testcase_name`
 
 ## Example usage
 
