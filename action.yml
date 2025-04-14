@@ -28,7 +28,7 @@ outputs:
   id:
     description: "ID"
   agentpool_name:
-    description: "Agent-pool name"
+    description: "Agentpool name"
   customer_id:
     description: "Customer ID"
   customer_name:
@@ -40,7 +40,7 @@ outputs:
   is_finished:
     description: 'Is finished'
   project_id:
-    description: 'Project id'
+    description: 'Project ID'
   project_name:
     description: 'Project name'
   result_description:
