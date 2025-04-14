@@ -30,6 +30,7 @@ async function run() {
       destination,
       sf_environment
     )
+
     core.debug(res)
 
     core.setOutput('id', res.id)
@@ -51,6 +52,10 @@ async function run() {
     core.setOutput('test_id', res.test_id)
     core.setOutput('test_name', res.test_name)
     core.setOutput('testcase_name', res.testcase_name)
+
+    if (res.session_status === 'failed') {
+      throw new Error(res.result_description)
+    }
   } catch (error) {
     // Fail the workflow run if an error occurs
     core.setFailed(error.message)

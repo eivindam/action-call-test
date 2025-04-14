@@ -54,9 +54,6 @@ async function run_call_test(
     console.log(res)
     await new Promise(r => setTimeout(r, 3000))
   } while (res.result.run.session_status === 'running')
-  if (res.result.run.session_status === 'failed') {
-    throw new Error(res.result.run.result_description)
-  }
 
   return new Promise(resolve => {
     resolve(res.result.run)

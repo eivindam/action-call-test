@@ -24963,9 +24963,32 @@ async function run() {
       destination,
       sf_environment
     )
+
     core.debug(res)
 
+    if (res.result.run.session_status === 'failed') {
+      throw new Error(res.result.run.result_description)
+    }
+
+    core.setOutput('id', res.id)
+    core.setOutput('agentpool_name', res.agentpool_name)
+    core.setOutput('customer_id', res.customer_id)
+    core.setOutput('customer_name', res.customer_name)
+    core.setOutput('has_passed', res.has_passed)
+    core.setOutput('is_failed', res.is_failed)
+    core.setOutput('is_finished', res.is_finished)
+    core.setOutput('project_id', res.project_id)
+    core.setOutput('project_name', res.project_name)
+    core.setOutput('result_description', res.result_description)
     core.setOutput('session_id', res.session_id)
+    core.setOutput('session_status', res.session_status)
+    core.setOutput('started_at', res.started_at)
+    core.setOutput('status', res.status)
+    core.setOutput('stopped_at', res.stopped_at)
+    core.setOutput('tags', res.tags)
+    core.setOutput('test_id', res.test_id)
+    core.setOutput('test_name', res.test_name)
+    core.setOutput('testcase_name', res.testcase_name)
   } catch (error) {
     // Fail the workflow run if an error occurs
     core.setFailed(error.message)
@@ -25038,9 +25061,6 @@ async function run_call_test(
     console.log(res)
     await new Promise(r => setTimeout(r, 3000))
   } while (res.result.run.session_status === 'running')
-  if (res.result.run.session_status === 'failed') {
-    throw new Error(res.result.run.result_description)
-  }
 
   return new Promise(resolve => {
     resolve(res.result.run)
