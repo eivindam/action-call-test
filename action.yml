@@ -34,11 +34,11 @@ outputs:
   customer_name:
     description: "Customer name"
   has_passed:
-    description: "Did the test pass?"
+    description: "Has passed"
   is_failed:
-    description: 'Did the test fail?'
+    description: 'Is failed'
   is_finished:
-    description: 'Did the test finish?'
+    description: 'Is finished'
   project_id:
     description: 'Project id'
   project_name:
