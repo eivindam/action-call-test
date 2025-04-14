@@ -25,8 +25,44 @@ inputs:
 
 # Define your outputs here.
 outputs:
+  id:
+    description: "ID"
+  agentpool_name:
+    description: "Agent-pool name"
+  customer_id:
+    description: "Customer ID"
+  customer_name:
+    description: "Customer name"
+  has_passed:
+    description: "Has passed"
+  is_failed:
+    description: 'Is failed'
+  is_finished:
+    description: 'Is finished'
+  project_id:
+    description: 'Project id'
+  project_name:
+    description: 'Project name'
+  result_description:
+    description: 'Result description'
   session_id:
-    description: 'The Sipfront session id used for the test run'
+    description: 'Session ID'
+  session_status:
+    description: 'Session status'
+  started_at:
+    description: 'Started at'
+  status:
+    description: 'Status'
+  stopped_at:
+    description: 'Stopped at'
+  tags:
+    description: 'Tags'
+  test_id:
+    description: 'Test ID'
+  test_name:
+    description: 'Test name'
+  testcase_name:
+    description: 'Testcase name'
 
 runs:
   using: node20
